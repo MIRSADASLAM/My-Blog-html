@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to my Blog</h1>
+    </header>
+    <!-- nav can also be included in header -->
+     <nav>
+        <ul>
+            <li><a href="">Home</a></li>
+            <!-- #about used in href is used to scroll to about when the About is clicked,and also we should give an id to the about section -->
+            <li><a href="#about">About</a></li>
+            <li><a href="#post">Blog Post</a></li>
+            <li><a href="#Contact">Contact</a></li>
+        </ul>
+     </nav>
+     
+     <main>
+        <section id="about">
+            <h2>Our Story</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quasi vel laudantium aliquid doloribus excepturi quibusdam ad repellat quod autem velit praesentium ab delectus nemo libero et mollitia, tenetur dolorum molestiae perferendis. Accusamus dolor cumque, repudiandae quia veritatis, earum, dolorem repellat dignissimos eos nam provident! Magni ex odit architecto inventore, adipisci ratione necessitatibus magnam dolorum debitis. Excepturi possimus atque nobis. Nam quos aliquid numquam esse minus laborum officia quae sequi, debitis iure voluptate magnam distinctio natus perferendis quas suscipit blanditiis ullam nihil explicabo. Fugit eaque et totam debitis necessitatibus a, quos animi repellendus praesentium suscipit placeat officia tempore quia aspernatur!</p>
+
+        </section>
+
+
+        <!-- Blog post content -->
+        <article id="post">
+            <h2>My recent Blog Post</h2>
+            <p>
+               This article contains a piece of content from a news article 
+               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis alias quibusdam voluptas optio soluta recusandae dolorem vitae, dolorum assumenda illo necessitatibus, est expedita, in aliquam sequi ex quisquam. Repellat, doloremque? 
+            </p>
+        </article>
+
+        <section id="Contact">
+            <h2>Contact us</h2>
+            <form action="#" method="post">
+                <!-- the for in this label & id in input should be same eg:"name" should used as for in label & id in input -->
+                <label for="name">Enter your name:</label>
+                <br>
+                <input type="text" id="name" placeholder="Eg:-Mirsad Aslam KK">
+                <br>
+
+                <!-- text input for feedback -->
+                 <label for="feedback">Your thoughts</label>
+                 <br>
+                 <!-- to get a lage area to type something from user -->
+                 <textarea name="feedback" id="feedback" cols="30" rows="10"></textarea>
+                <br>
+                 <button type="submit">
+                    submit
+                 </button>
+
+            </form>
+        </section>
+     </main>
+
+     <footer>
+        <p>&copy; Mirsad Aslam KK 2025</p>
+     </footer>
+</body>
+</html>
