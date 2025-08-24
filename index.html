@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My blog post</title>
 </head>
 <body>
     <header>
@@ -40,18 +40,71 @@
         <section id="Contact">
             <h2>Contact us</h2>
             <form action="#" method="post">
-                <!-- the for in this label & id in input should be same eg:"name" should used as for in label & id in input -->
+                <!-- the "for" in this label & "id" in input should be same eg:"name" ,so when we touch the label name in output the cursor automatically goes to the input field-->
                 <label for="name">Enter your name:</label>
                 <br>
-                <input type="text" id="name" placeholder="Eg:-Mirsad Aslam KK">
+                <!-- " placeholder attribute is used to show a short hint (a description or example) inside an input field before the user enters a value.
+                 placeholder text disappears once the user types something. " -->
+                <input type="text" id="name" placeholder="Eg:-Mirsad Aslam KK" required minlength="3" maxlength="50">
                 <br>
-
+                <label for="email">email</label>
+                <br>
+                <input type="email" name="email" id="email" required >
+                <br>
+                <!-- Regular Expression -->
+                 <!-- eg of format by a phone number -->
+                <label for="phone">Phone nunmber</label>
+                <br>
+                <!-- dont use min and maxlength while using format -->
+                 <!-- use "tel" for the phone number types -->
+                <input type="tel" name="phone" id="phone" required placeholder="eg:-1234-567-890" pattern="\d{4}-\d{3}-\d{3}">
+                                                                                                    <!-- if i want an input from user in specific format i use patern,and \d indicates digit and the number inside the curly brace indicater how much number.here
+                                                                                                    \d{4}-\d{3}-\d{3} means 1234-456-789 is the format -->
+                <br>
+                <!-- website -->
+                 <label for="url">website </label>
+                 <br>
+                 <!-- type=url is used to mention the input type is a www.google.com format -->
+                 <input type="url" name="url" id="url" placeholder="www.example.com">
                 <!-- text input for feedback -->
                  <label for="feedback">Your thoughts</label>
                  <br>
                  <!-- to get a lage area to type something from user -->
                  <textarea name="feedback" id="feedback" cols="30" rows="10"></textarea>
                 <br>
+
+                <!-- rate your experience -->
+                <p>how would you rate this blog</p>
+                <!-- "radio" button is used to show the round symbol to select,eg:- used to select genders. -->
+                                                           <!-- "value"  is used to send the value to backend -->
+
+                <!-- in this case there should only one option to be selected ,so value of the name attribute inside input should be same value to all the cases ,eg:- name="rating"  -->
+                <input type="radio" name="rating" id="good" value="good">
+                <label for="good">Good</label>
+                <br>
+                <input type="radio" name="rating" id="neutral" value="neutral">
+                <label for="good">Neutral</label>
+                <br><input type="radio" name="rating" id="bad" value="bad">
+                <label for="bad">bad</label>
+                <br>
+
+                <!-- news letter sign up -->
+                <!-- checkbox -->
+                <input type="checkbox" name="newsletter" id="newsletter" value="yes">
+                <label for="newsletter">sign up for newsletter </label>
+                <br>
+                <!-- news letter topics  -->
+                <label for="topic">choose a topic</label>
+                <br>
+                <!-- "select" this tag is used to get dropdown ,"options" is used to gvive different options  -->
+                <select name="topic" id="topic">
+                    <option value="">please choose an option</option>
+                    <option value="general">general</option>
+                    <option value="suggestions">suggestions</option>
+                    <option value="questions">questions</option>
+                    
+                </select>
+                <br><br><br>
                  <button type="submit">
                     submit
                  </button>
